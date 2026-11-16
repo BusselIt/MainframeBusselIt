@@ -29,7 +29,7 @@ h2 { font-size: 15px; margin: 0; font-weight: 600; }
 .btn.ok { color: var(--ok); } .btn.danger { color: var(--err); }
 .btn:disabled { opacity: .55; cursor: wait; }
 
-.layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 16px; padding: 20px 24px; max-width: 1500px; margin: 0 auto; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 16px; padding: 20px 24px; max-width: 1500px; margin: 0 auto; }
 .kpis { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
 .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
 .kpi .label { color: var(--muted); font-size: 12px; }
@@ -43,9 +43,10 @@ h2 { font-size: 15px; margin: 0; font-weight: 600; }
 .tabs button.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; }
-th, td { text-align: left; padding: 10px 16px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
 th { font-size: 12px; color: var(--muted); font-weight: 500; }
-td.subject { white-space: normal; min-width: 220px; }
+td.subject, td.client { white-space: normal; min-width: 160px; }
+th:first-child, td:first-child { padding-left: 16px; } th:last-child, td:last-child { padding-right: 16px; }
 tbody tr { cursor: pointer; } tbody tr:hover { background: var(--surface-2); }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .badge { display: inline-block; white-space: nowrap; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 500; background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); }

@@ -66,7 +66,7 @@ async function loadRequests() {
     const t = r.quote?.totals;
     const est = t ? [t.oneOffExVat ? eur(t.oneOffExVat) : "", t.monthlyExVat ? `${eur(t.monthlyExVat)}/m` : ""].filter(Boolean).join(" + ") || "–" : "–";
     return `<tr data-id="${r.id}"><td>${dt(r.received_at)}</td><td>${SOURCE[r.source] ?? esc(r.source)}</td>
-      <td>${esc(r.company || r.customer_name || r.email || "–")}<div class="detail muted small">${esc(r.company ? r.customer_name ?? "" : "")}</div></td>
+      <td class="client">${esc(r.company || r.customer_name || r.email || "–")}<div class="detail muted small">${esc(r.company ? r.customer_name ?? "" : "")}</div></td>
       <td class="subject">${esc(r.subject || r.summary || "")}</td>
       <td>${r.priority && r.priority !== "normaal" ? `<span class="badge ${PRIO[r.priority]}">${esc(r.priority)}</span>` : ""}</td>
       <td class="num">${est}</td><td>${badge(STATUS, r.status)}</td></tr>`;
