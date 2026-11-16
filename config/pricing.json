@@ -1,0 +1,26 @@
+{
+  "_toelichting": "VOORBEELDTARIEVEN – pas aan naar de echte BusselIT-prijzen. De AI gebruikt alleen deze lijst als basis voor offertes.",
+  "currency": "EUR",
+  "vatRate": 0.21,
+  "hourlyRates": {
+    "consultancy": 95,
+    "support": 75,
+    "installatie": 85,
+    "voorrijkosten": 35
+  },
+  "catalog": [
+    { "sku": "MW-BEHEER",    "name": "Werkplekbeheer per gebruiker",        "unit": "gebruiker/maand", "price": 29.5,  "category": "managed-services" },
+    { "sku": "M365-BP",      "name": "Microsoft 365 Business Premium",      "unit": "licentie/maand",  "price": 22.0,  "category": "licenties" },
+    { "sku": "M365-BS",      "name": "Microsoft 365 Business Standard",     "unit": "licentie/maand",  "price": 12.5,  "category": "licenties" },
+    { "sku": "M365-MIGR",    "name": "Migratie naar Microsoft 365",          "unit": "per mailbox",     "price": 45.0,  "category": "projecten" },
+    { "sku": "BACKUP-M365",  "name": "Cloud back-up Microsoft 365",          "unit": "gebruiker/maand", "price": 3.5,   "category": "managed-services" },
+    { "sku": "LAPTOP-STD",   "name": "Zakelijke laptop (standaard, 14\")",   "unit": "stuk",            "price": 949.0, "category": "hardware" },
+    { "sku": "LAPTOP-PRO",   "name": "Zakelijke laptop (pro, 14\")",         "unit": "stuk",            "price": 1449.0,"category": "hardware" },
+    { "sku": "MONITOR-27",   "name": "Monitor 27\" QHD met USB-C",           "unit": "stuk",            "price": 329.0, "category": "hardware" },
+    { "sku": "WIFI-AP",      "name": "Zakelijk wifi access point",           "unit": "stuk",            "price": 249.0, "category": "netwerk" },
+    { "sku": "FIREWALL-SMB", "name": "Firewall MKB incl. configuratie",      "unit": "stuk",            "price": 895.0, "category": "netwerk" },
+    { "sku": "SWITCH-24",    "name": "Managed switch 24 poorten PoE",        "unit": "stuk",            "price": 549.0, "category": "netwerk" },
+    { "sku": "WERKPLEK-INR", "name": "Inrichten nieuwe werkplek",            "unit": "werkplek",        "price": 125.0, "category": "projecten" },
+    { "sku": "SEC-SCAN",     "name": "Security quickscan",                   "unit": "eenmalig",        "price": 495.0, "category": "security" }
+  ]
+}

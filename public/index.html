@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BusselIT Mainframe</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">B</span><div><strong>BusselIT</strong> <span class="muted">Mainframe</span></div></div>
+  <div class="actions">
+    <span id="demoBadge" class="badge warn" hidden>Demo-modus</span>
+    <button id="btnNew" class="btn">+ Nieuwe aanvraag</button>
+    <button id="btnSync" class="btn primary">Synchroniseren</button>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="kpis" id="kpis"></section>
+
+  <section class="card requests">
+    <div class="card-head">
+      <h2>Klantaanvragen</h2>
+      <div class="tabs" id="tabs">
+        <button data-status="" class="active">Alle</button>
+        <button data-status="concept_klaar">Concept klaar</button>
+        <button data-status="in_behandeling">In behandeling</button>
+        <button data-status="verstuurd">Verstuurd</button>
+        <button data-status="gewonnen">Gewonnen</button>
+        <button data-status="fout">Fout</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Ontvangen</th><th>Bron</th><th>Klant</th><th>Onderwerp</th><th>Prio</th><th class="num">Inschatting</th><th>Status</th></tr></thead>
+        <tbody id="reqBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <aside class="side">
+    <section class="card"><div class="card-head"><h2>Aanvragen (14 dagen)</h2></div><div id="chart" class="chart"></div></section>
+    <section class="card"><div class="card-head"><h2>Koppelingen</h2></div><ul id="integrations" class="list"></ul></section>
+    <section class="card"><div class="card-head"><h2>Recente facturen <span class="muted small">e-Boekhouden</span></h2></div><ul id="invoices" class="list"></ul></section>
+    <section class="card"><div class="card-head"><h2>Activiteit</h2></div><ul id="activity" class="list activity"></ul></section>
+  </aside>
+</main>
+
+<div id="drawer" class="drawer" hidden>
+  <div class="drawer-backdrop" data-close></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true">
+    <button class="close" data-close aria-label="Sluiten">×</button>
+    <div id="drawerContent"></div>
+  </div>
+</div>
+
+<dialog id="newDialog">
+  <form method="dialog" id="newForm" class="form">
+    <h2>Nieuwe aanvraag (handmatig)</h2>
+    <div class="grid2">
+      <label>Naam<input name="customerName"></label>
+      <label>Bedrijf<input name="company"></label>
+      <label>E-mail<input name="email" type="email"></label>
+      <label>Telefoon<input name="phone"></label>
+    </div>
+    <label>Onderwerp<input name="subject"></label>
+    <label>Omschrijving<textarea name="body" rows="6" required></textarea></label>
+    <div class="row-end"><button value="cancel" class="btn" formnovalidate>Annuleren</button><button value="ok" class="btn primary">Opslaan &amp; inschatten</button></div>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
